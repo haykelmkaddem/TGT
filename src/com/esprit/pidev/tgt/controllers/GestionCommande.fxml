@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="467.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.pidev.tgt.controllers.GestionCommandeController">
+   <children>
+      <TableView fx:id="TableCommande" layoutX="354.0" layoutY="69.0" onMouseClicked="#getSelected" prefHeight="274.0" prefWidth="385.0">
+        <columns>
+          <TableColumn fx:id="Nom1" prefWidth="75.0" text="Nom" />
+          <TableColumn fx:id="Prenom1" prefWidth="75.0" text="Prenom" />
+            <TableColumn fx:id="Prix_Total1" prefWidth="75.0" text="Prix Total" />
+            <TableColumn fx:id="Date_Commande1" prefWidth="159.0" text="Date Commande" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="445.0" layoutY="33.0" onKeyTyped="#SearchCommande" />
+      <TextField fx:id="messagesms" layoutX="125.0" layoutY="103.0" prefHeight="85.0" prefWidth="149.0" />
+      <Button fx:id="TriC" layoutX="477.0" layoutY="356.0" mnemonicParsing="false" onAction="#TrierParDate" text="Trier Par Date" />
+      <Label layoutX="23.0" layoutY="103.0" text="Votre Probléme" />
+      <Label layoutX="385.0" layoutY="37.0" text="Search" />
+      <ImageView fx:id="UpdateImage" fitHeight="25.0" fitWidth="61.0" layoutX="253.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="DeleteImage" fitHeight="25.0" fitWidth="61.0" layoutX="261.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="125.0" layoutY="14.0" prefHeight="38.0" prefWidth="127.0" text="CONTACTEZ-NOUS" />
+      <Button fx:id="envoyer" layoutX="125.0" layoutY="209.0" mnemonicParsing="false" onAction="#EnvoyerSMS" text="Envoyer" />
+   </children>
+</AnchorPane>

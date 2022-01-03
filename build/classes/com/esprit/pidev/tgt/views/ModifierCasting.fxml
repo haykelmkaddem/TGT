@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="636.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <Label layoutX="228.0" layoutY="14.0" prefHeight="82.0" prefWidth="410.0" text="Modifier Casting">
+         <font>
+            <Font name="Brush Script MT Italic" size="60.0" />
+         </font>
+      </Label>
+      <TextField fx:id="titre" layoutX="65.0" layoutY="124.0" prefHeight="31.0" prefWidth="679.0" promptText="titre" />
+      <TextArea fx:id="description" layoutX="65.0" layoutY="179.0" prefHeight="157.0" prefWidth="679.0" promptText="Description" />
+      <DatePicker fx:id="DateCasting" layoutX="65.0" layoutY="428.0" promptText="Date Casting" />
+      <DatePicker fx:id="DateLimite" layoutX="526.0" layoutY="428.0" promptText="Date Limite de postuler" />
+      <TextField fx:id="adresse" layoutX="65.0" layoutY="364.0" prefHeight="31.0" prefWidth="218.0" promptText="Adresse" />
+      <ComboBox fx:id="theme" depthTest="ENABLE" layoutX="526.0" layoutY="364.0" prefHeight="31.0" prefWidth="218.0" promptText="Theme" />
+      <Button fx:id="ajouterCasting" layoutX="320.0" layoutY="573.0" mnemonicParsing="false"  prefHeight="48.0" prefWidth="169.0" style="-fx-background-color: linear-gradient(to right, #cc1573, #5722a9);" text="Modifier" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <ImageView fx:id="image" fitHeight="100.0" fitWidth="150.0" layoutX="594.0" layoutY="473.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@ressources/photo.png" />
+         </image></ImageView>
+   </children>
+</AnchorPane>

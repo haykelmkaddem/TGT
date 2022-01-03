@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="756.0" prefWidth="1262.0" stylesheets="@styleBack.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.pidev.tgt.controllers.BackOfficeEcommerceController">
+   <children>
+      <SplitPane dividerPositions="0.18812785388127853" layoutX="14.0" layoutY="13.0" prefHeight="737.0" prefWidth="1097.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #4B0082;" styleClass="side" stylesheets="@style.css">
+               <children>
+                  <Button fx:id="condidature" layoutY="164.0" mnemonicParsing="false" onAction="#condidature" prefHeight="70.0" prefWidth="202.0" text="gestion de candidature" />
+                  <Button fx:id="gestionOrganisation" layoutY="242.0" mnemonicParsing="false" onAction="#organisation" prefHeight="70.0" prefWidth="202.0" text="gestion d'organisation" />
+                  <Button fx:id="utilisateur" layoutX="1.0" layoutY="321.0" mnemonicParsing="false" onAction="#utilisateur" prefHeight="70.0" prefWidth="202.0" text="gestion d'Utilisateur" />
+                  <Button fx:id="utilisateur" layoutX="1.0" layoutY="399.0" mnemonicParsing="false" onAction="#publication" prefHeight="70.0" prefWidth="202.0" text="gestion de Publicatiion" />
+                  <Button fx:id="Ecommerce" layoutY="477.0" mnemonicParsing="false" onAction="#Ecommerce" prefHeight="70.0" prefWidth="202.0" text="gestion de Produit " />
+                  <Button fx:id="formation" layoutY="557.0" mnemonicParsing="false" onAction="#formation" prefHeight="70.0" prefWidth="202.0" text="Gestion de formation" />
+                  <ImageView fitHeight="242.0" fitWidth="202.0" layoutX="-1.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ressources/TGT.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="736.0" prefWidth="930.0">
+               <children>
+                  <TabPane layoutX="-8.0" prefHeight="735.0" prefWidth="897.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab fx:id="afficheProduits" text="Afficher la liste des Produits">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@style.css">
+                                 <children>
+                                    <ScrollPane layoutX="14.0" layoutY="70.0" prefHeight="612.0" prefWidth="873.0">
+                                       <content>
+                                          <TableView fx:id="tableViewProduits" prefHeight="589.0" prefWidth="1184.0">
+                                             <columns>
+                                                <TableColumn fx:id="ImageProduit" maxWidth="210.0" minWidth="80.0" prefWidth="210.0" text="Image Produit" />
+                                                <TableColumn fx:id="NomProduit" prefWidth="108.0" text="Nom Produit" />
+                                                <TableColumn fx:id="DescriptionProduit" prefWidth="212.0" text="Description" />
+                                                <TableColumn fx:id="PrixProduit" maxWidth="302.0" minWidth="0.0" prefWidth="71.0" text="Prix" />
+                                                <TableColumn fx:id="QuantiteProduit" prefWidth="97.0" text="Quantité" />
+                                                <TableColumn fx:id="CategorieProduit" prefWidth="170.0" text="catégorie" />
+                                             </columns>
+                                          </TableView>
+                                       </content>
+                                    </ScrollPane>
+                                    <TextField fx:id="rechercheP" layoutX="607.0" layoutY="17.0" onKeyTyped="#SearchProduit" prefHeight="41.0" prefWidth="164.0" />
+                                    <Button layoutX="778.0" layoutY="18.0" mnemonicParsing="false" onAction="#rechercheProduits" prefHeight="21.0" prefWidth="99.0" text="Rechercher" />
+                                    <Button layoutX="97.0" layoutY="18.0" mnemonicParsing="false" onAction="#ajouterProduits" text="Ajouter" />
+                                    <Button layoutX="235.0" layoutY="18.0" mnemonicParsing="false" onAction="#modifierProduits" text="Modifier " />
+                                    <Button layoutX="425.0" layoutY="18.0" mnemonicParsing="false" onAction="#supprimerProduits" prefHeight="20.0" prefWidth="95.0" text="Supprimer" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="AfficheCategorie" text="Aficher la liste des Catégorie">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@style.css">
+                                 <children>
+                                    <ScrollPane layoutX="6.0" layoutY="80.0" prefHeight="612.0" prefWidth="1011.0">
+                                       <content>
+                                          <TableView fx:id="tableViewCategorie" prefHeight="589.0" prefWidth="1184.0">
+                                             <columns>
+                                                <TableColumn fx:id="NomCategorie" maxWidth="362.0" minWidth="80.0" prefWidth="362.0" text="Nom Catégorie" />
+                                             </columns>
+                                          </TableView>
+                                       </content>
+                                    </ScrollPane>
+                                    <Button layoutX="92.0" layoutY="27.0" mnemonicParsing="false" onAction="#ajouterCategories" text="Ajouter" />
+                                    <Button layoutX="245.0" layoutY="27.0" mnemonicParsing="false" onAction="#modifierCategories" text="Modifier" />
+                                    <Button fx:id="supprimerCasting" layoutX="417.0" layoutY="27.0" mnemonicParsing="false" onAction="#supprimerCategories" text="Supprimer" />
+                                    <Button layoutX="769.0" layoutY="27.0" mnemonicParsing="false" text="Rechercher" />
+                                    <TextField fx:id="SearchC" layoutX="611.0" layoutY="27.0" onKeyTyped="#SearchCat" prefHeight="40.0" prefWidth="149.0" />
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="afficheEvents" text="Afficher la liste des Commandes">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@style.css">
+                                 <children>
+                                    <ScrollPane layoutX="14.0" layoutY="70.0" prefHeight="612.0" prefWidth="1019.0">
+                                       <content>
+                                          <TableView fx:id="TableCommande" prefHeight="589.0" prefWidth="1184.0">
+                                             <columns>
+                                                <TableColumn fx:id="Nom1" prefWidth="116.0" text="Nom" />
+                                                <TableColumn fx:id="Prenom1" maxWidth="302.0" minWidth="0.0" prefWidth="93.0" text="Prenom" />
+                                                <TableColumn fx:id="Prix_Total1" prefWidth="119.0" text="Prix Total" />
+                                                <TableColumn fx:id="Date_Commande1" prefWidth="216.0" text="Date Commande " />
+                                             </columns>
+                                             <contextMenu>
+                                                <ContextMenu styleClass="table-context">
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" onAction="#showDetaille" text="details" />
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu>
+                                          </TableView>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="afficheEvents1" text="Afficher la liste des Paiements">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@style.css">
+                                 <children>
+                                    <ScrollPane layoutX="14.0" layoutY="70.0" prefHeight="612.0" prefWidth="1019.0">
+                                       <content>
+                                          <TableView fx:id="TablePaiement" prefHeight="589.0" prefWidth="1184.0">
+                                             <columns>
+                                                <TableColumn fx:id="Nom2" prefWidth="97.0" text="Nom" />
+                                                <TableColumn fx:id="Prenom2" maxWidth="302.0" minWidth="0.0" prefWidth="91.0" text="Prenom" />
+                                                <TableColumn fx:id="NumCarte" prefWidth="140.0" text="Num Carte" />
+                                                <TableColumn fx:id="DateExpiration" prefWidth="114.0" text="Date D'Expiration" />
+                                                <TableColumn fx:id="CodeSec" prefWidth="84.0" text="Code Sécurité" />
+                                                <TableColumn fx:id="TypePaiement" prefWidth="91.0" text="Type Paiement" />
+                                                <TableColumn fx:id="Pays" minWidth="0.0" prefWidth="81.0" text="Pays" />
+                                                <TableColumn fx:id="Email1" minWidth="0.0" prefWidth="179.0" text="Email" />
+                                             </columns>
+                                             <contextMenu>
+                                                <ContextMenu styleClass="table-context">
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" onAction="#showDetaille" text="details" />
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu>
+                                          </TableView>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ImageView fx:id="logout" fitHeight="62.0" fitWidth="64.0" layoutX="1184.0" layoutY="27.0" onMouseClicked="#logout">
+         <image>
+            <Image url="@ressources/logout.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

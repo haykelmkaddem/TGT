@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="itemcandidat" prefHeight="362.0" prefWidth="923.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="20.0" layoutY="17.0" prefHeight="338.0" prefWidth="896.0" style="-fx-background-color: #fff;">
+         <children>
+            <Separator layoutX="381.0" layoutY="85.0" prefHeight="7.0" prefWidth="500.0" />
+            <Label fx:id="Lnomcondidat" layoutX="381.0" layoutY="30.0" text="housssem marsaoui" textFill="#5722a9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutX="414.0" layoutY="295.0" prefHeight="37.0" prefWidth="448.0" style="-fx-background-color: #F0F0F0;" />
+            <HBox layoutX="414.0" layoutY="295.0" prefHeight="37.0" prefWidth="448.0">
+               <children>
+                  <JFXButton fx:id="btn_edit" prefHeight="37.0" prefWidth="150.0" text="Modifier">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="edit_icon" glyphName="EDIT" size="14" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_delete" prefHeight="37.0" prefWidth="150.0" text="Supprimer">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="delete_icon" glyphName="TRASH" size="14" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="affercter_btn" prefHeight="37.0" prefWidth="170.0" text="Affecter une Date">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="comments_icon" glyphName="COMMENTS" size="14" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Label fx:id="position" layoutX="393.0" layoutY="14.0" text="candiatat" />
+            <FontAwesomeIconView glyphName="MAP_MARKER" layoutX="381.0" layoutY="28.0" size="16" />
+            <Label fx:id="position1" layoutX="685.0" layoutY="8.0" text="participe au casting de :" />
+            <Label fx:id="LtitreCasting" alignment="TOP_LEFT" layoutX="631.0" layoutY="30.0" prefHeight="50.0" prefWidth="255.0" text="musique" textFill="#5722a9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="position2" layoutX="393.0" layoutY="105.0" text="Mail Address" />
+            <Label fx:id="Lmailaddress" layoutX="493.0" layoutY="102.0" text="housssem@marsaoui.com" textFill="#5722a9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="position21" layoutX="393.0" layoutY="129.0" text="Cin" />
+            <Label fx:id="Lcin" layoutX="493.0" layoutY="126.0" text="05492243" textFill="#5722a9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="position211" layoutX="393.0" layoutY="153.0" text="Num Tel" />
+            <Label fx:id="Lnumtel" layoutX="493.0" layoutY="150.0" text="50713446" textFill="#5722a9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="position212" layoutX="396.0" layoutY="174.0" text="CV" />
+            <Label fx:id="Lcv" layoutX="496.0" layoutY="171.0" text="apercu" textFill="#5722a9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="position213" layoutX="396.0" layoutY="198.0" text="Motivation" />
+            <JFXTextArea fx:id="Lmotivation" focusColor="#5722a9" layoutX="496.0" layoutY="198.0" prefHeight="87.0" prefWidth="354.0" text="bonjour c mon travaille" unFocusColor="#5722a9">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextArea>
+            <ImageView fitHeight="264.0" fitWidth="332.0" layoutX="20.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ressources/bg-2.jpg" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow color="#d7d2d2" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

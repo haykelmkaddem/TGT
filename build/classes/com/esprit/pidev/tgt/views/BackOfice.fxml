@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="754.0" prefWidth="1120.0" styleClass="column-header" stylesheets="@styleBack.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.pidev.tgt.controllers.BackOficeController">
+   <children>
+      <SplitPane dividerPositions="0.18812785388127853" layoutX="14.0" layoutY="13.0" prefHeight="737.0" prefWidth="1097.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #4B0082;" styleClass="side">
+               <children>
+                  <Button fx:id="gestionCandidature" layoutY="164.0" mnemonicParsing="false" onAction="#candidature" prefHeight="70.0" prefWidth="202.0" text="gestion de candidature" />
+                  <Button fx:id="organisation" layoutY="242.0" mnemonicParsing="false" onAction="#organisation" prefHeight="70.0" prefWidth="202.0" text="gestion d'organisation" />
+                  <Button fx:id="utilisateur" layoutX="1.0" layoutY="321.0" mnemonicParsing="false" onAction="#profile" prefHeight="70.0" prefWidth="202.0" text="gestion d'Utilisateur" />
+                  <Button fx:id="publication" layoutX="1.0" layoutY="399.0" mnemonicParsing="false" onAction="#publication" prefHeight="70.0" prefWidth="202.0" text="gestion de Publicatiion" />
+                  <Button fx:id="produit" layoutY="477.0" mnemonicParsing="false" onAction="#produit" prefHeight="70.0" prefWidth="202.0" text="gestion de Produit " />
+                  <Button fx:id="formation" layoutY="557.0" mnemonicParsing="false" onAction="#formation" prefHeight="70.0" prefWidth="202.0" text="Gestion de formation" />
+                  <ImageView fitHeight="178.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ressources/TGT.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="side">
+               <children>
+                  <TabPane layoutX="-8.0" prefHeight="735.0" prefWidth="885.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="afficher les condidat">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@styleBack.css">
+                                 <children>
+                                    <ScrollPane layoutX="14.0" layoutY="70.0" prefHeight="612.0" prefWidth="873.0">
+                                       <content>
+                                          <TableView fx:id="tableViewCandidat" prefHeight="589.0" prefWidth="1184.0">
+                                             <columns>
+                                                <TableColumn fx:id="cin" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="-1.0" text="cin de candidat" />
+                                                <TableColumn fx:id="nomC" prefWidth="136.0" text="nom candidat" />
+                                                <TableColumn fx:id="addressmail" prefWidth="190.0" text="addrese mail " />
+                                                <TableColumn fx:id="numtel" maxWidth="302.0" minWidth="0.0" prefWidth="159.0" text="numero du tel" />
+                                                <TableColumn fx:id="cv" prefWidth="95.0" text="cv" />
+                                                <TableColumn fx:id="motivation" minWidth="0.0" prefWidth="189.0" text="motivation" />
+                                                <TableColumn fx:id="nomCasting" minWidth="0.0" prefWidth="164.0" text="nom du casting" />
+                                                <TableColumn fx:id="statut" prefWidth="116.0" text="statut" />
+                                             </columns>
+                                             <contextMenu>
+                                                <ContextMenu styleClass="table-context">
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" onAction="#showDetaille" text="details" />
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu>
+                                          </TableView>
+                                       </content>
+                                    </ScrollPane>
+                                    <TextField layoutX="611.0" layoutY="26.0" prefHeight="31.0" prefWidth="260.0" />
+                                    <Button fx:id="recherchecandidat" layoutX="511.0" layoutY="26.0" mnemonicParsing="false" text="recherche" />
+                                    <Button fx:id="modifier" layoutX="49.0" layoutY="26.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
+                                    <Button fx:id="suprimer" layoutX="145.0" layoutY="26.0" mnemonicParsing="false" onAction="#suprimer" text="suprimer" />
+                                    <Button fx:id="affectationDate" layoutX="293.0" layoutY="26.0" mnemonicParsing="false" onAction="#affectationDate" prefHeight="31.0" prefWidth="158.0" styleClass="action-btn" text="attribuer une date" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="aficher liste des entretient">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane layoutX="6.0" layoutY="70.0" prefHeight="612.0" prefWidth="873.0">
+                                       <content>
+                                          <TableView fx:id="tableViewEntretient" prefHeight="589.0" prefWidth="1184.0">
+                                             <columns>
+                                                <TableColumn fx:id="nomCasting" prefWidth="136.0" text="nom du casting" />
+                                                <TableColumn fx:id="nomCandidat" prefWidth="147.0" text="nom du candidat" />
+                                                <TableColumn fx:id="dateEntretient" prefWidth="135.0" text="date d'entretient" />
+                                                <TableColumn fx:id="heurEntretient" minWidth="0.0" prefWidth="178.0" text="heurs d'entretient" />
+                                                <TableColumn fx:id="satutE" minWidth="0.0" prefWidth="175.0" text="statut" />
+                                                <TableColumn fx:id="noteE" prefWidth="116.0" text="note" />
+                                             </columns>
+                                             <contextMenu>
+                                                <ContextMenu styleClass="table-context">
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" onAction="#showDetaille" text="details" />
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu>
+                                          </TableView>
+                                       </content>
+                                    </ScrollPane>
+                                    <TextField layoutX="603.0" layoutY="25.0" prefHeight="31.0" prefWidth="260.0" />
+                                    <Button fx:id="rechercheEntretient" layoutX="507.0" layoutY="25.0" mnemonicParsing="false" onAction="#rechercheEntretient" text="recherche" />
+                                    <Button fx:id="modifierEntretient" layoutX="36.0" layoutY="25.0" mnemonicParsing="false" onAction="#modifierEntretient" text="modifier" />
+                                    <Button fx:id="suprimerEntrretient" layoutX="127.0" layoutY="25.0" mnemonicParsing="false" onAction="#suprimerEntrretient" text="suprimer" />
+                                    <Button layoutX="277.0" layoutY="25.0" mnemonicParsing="false" onAction="#makeCall" prefHeight="31.0" prefWidth="146.0" text="meeting room" />
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ImageView fx:id="logout" fitHeight="44.0" fitWidth="48.0" layoutX="1054.0" layoutY="17.0" onMouseClicked="#logout">
+         <image>
+            <Image url="@ressources/logout.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

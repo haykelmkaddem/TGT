@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.pidev.tgt.controllers.ListeContratController">
+   <children>
+      <TableView fx:id="contratView" layoutX="20.0" layoutY="111.0" prefHeight="493.0" prefWidth="771.0">
+         <columns>
+            <TableColumn fx:id="nomC" prefWidth="136.0" text="titre casting" />
+            <TableColumn fx:id="titreCasting" prefWidth="190.0" text="nom candidat" />
+            <TableColumn fx:id="salaire" maxWidth="302.0" minWidth="0.0" prefWidth="159.0" text="salaire" />
+            <TableColumn fx:id="typecontrat" prefWidth="95.0" text="type contrat" />
+            <TableColumn fx:id="duree" minWidth="0.0" prefWidth="189.0" text="duree" />
+         </columns>
+         <contextMenu>
+            <ContextMenu styleClass="table-context">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#showDetaille" text="details" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Button layoutX="55.0" layoutY="53.0" mnemonicParsing="false" onAction="#voircontrat" text="apercu le contrat" />
+      <Label layoutX="280.0" layoutY="14.0" prefHeight="40.0" prefWidth="216.0" text="Liste Contrats" textFill="#5e14b2">
+         <font>
+            <Font name="System Bold Italic" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="item" prefHeight="362.0" prefWidth="923.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="20.0" layoutY="17.0" prefHeight="338.0" prefWidth="896.0" style="-fx-background-color: #fff;">
+         <children>
+            <Pane layoutX="414.0" layoutY="241.0" prefHeight="37.0" prefWidth="448.0" style="-fx-background-color: linear-gradient(to right, #cc1573, #5722a9);">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USD" layoutX="310.0" layoutY="24.0" size="18" />
+                  <Label fx:id="prix" layoutX="342.0" layoutY="1.0" text="label" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR" layoutX="14.0" layoutY="25.0" size="18" />
+                  <Label fx:id="theme" layoutX="43.0" layoutY="2.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Separator layoutX="381.0" layoutY="85.0" prefHeight="7.0" prefWidth="500.0" />
+            <Label fx:id="titre" layoutX="381.0" layoutY="30.0" text="Quote in progress" textFill="#5722a9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutX="414.0" layoutY="295.0" prefHeight="37.0" prefWidth="448.0" style="-fx-background-color: #F0F0F0;" />
+            <Label layoutX="730.0" layoutY="12.0" text="Date Evenement" textFill="#5722a9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="day" layoutX="689.0" layoutY="30.0" text="16" textFill="#aeacac">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="month" layoutX="738.0" layoutY="38.0" text="APR" textFill="#3a1c9d" />
+            <Label fx:id="year" layoutX="738.0" layoutY="56.0" text="2018" textFill="#aeacac" />
+            <HBox layoutX="414.0" layoutY="295.0" prefHeight="37.0" prefWidth="448.0">
+               <children>
+                  <JFXButton fx:id="btn_edit" prefHeight="37.0" prefWidth="150.0" text="Modifier">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="edit_icon" glyphName="EDIT" size="14" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_delete" prefHeight="37.0" prefWidth="150.0" text="Supprimer">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="delete_icon" glyphName="TRASH" size="14" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="comments_btn" prefHeight="37.0" prefWidth="150.0" text="QR Code">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="comments_icon" glyphName="QRCODE" size="14" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Label fx:id="time" layoutX="786.0" layoutY="38.0" prefHeight="34.0" prefWidth="85.0" text="16" textFill="#aeacac">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="adresse" layoutX="393.0" layoutY="14.0" text="Label" />
+            <FontAwesomeIconView glyphName="MAP_MARKER" layoutX="381.0" layoutY="28.0" size="16" />
+            <ImageView fx:id="imageView" fitHeight="326.0" fitWidth="376.0" layoutX="2.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="desc" layoutX="390.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="465.6708984375" />
+         </children>
+         <effect>
+            <DropShadow color="#d7d2d2" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>
